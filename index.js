@@ -24,9 +24,9 @@ colorContainer.addEventListener("click", function(){
   let squares = document.querySelectorAll(".square")
   squares.forEach(square => {
     square.addEventListener("mouseover", function(e){
-      let r = Math.floor(Math.random() * 256);
-      let g = Math.floor(Math.random() * 256);
-      let b = Math.floor(Math.random() * 256);
+      let r = Math.floor(Math.random() * 255);
+      let g = Math.floor(Math.random() * 255);
+      let b = Math.floor(Math.random() * 255);
       e.target.style.backgroundColor = `rgb(${r} ${g} ${b})`;
     })
   })     
@@ -36,7 +36,7 @@ function appendChildToContainer(num){
   const sketchPad = document.createElement("div");
   sketchPad.classList.add("sketch-pad");
   console.log(container)
-  for (let i =0; i < num * num; i++){
+  for (let i =  0; i < num * num; i++){
     let newGridCreated = document.createElement("div");
     newGridCreated.classList.add("square");
     newGridCreated.style.backgroundColor = "white";
